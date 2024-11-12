@@ -38,12 +38,8 @@ header {
 
 .navbar ul li {
     margin: 0 15px;
-    border: 1px solid #00e5ff;
-    padding: 5%;
-    border-radius: 30px;
-    box-shadow: 0 4px 10px rgba(0, 229, 255, 0.4);
     text-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff;
-    background-color: #333;
+    text-decoration: underline;
     
 }   
 
