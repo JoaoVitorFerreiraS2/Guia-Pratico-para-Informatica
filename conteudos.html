@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteúdos de Aprendizado - Informática Fácil</title>
+    <link rel="stylesheet" href="css/styleConteudo.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>Informática Fácil</h1>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="conteudos.html">Conteúdos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdos -->
+    <section class="conteudos">
+        <h2>Aprenda com Vídeos</h2>
+
+        <!-- Bloco de Programação -->
+        <div class="content-block">
+            <h3>Informática Básica</h3>
+            <div class="carousel-container">
+                <button class="prev-btn">&#10094;</button>
+                <div class="video-carousel">
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/embed/WULwZ6v_Ai8"
+                            title="Informática Básica"></iframe>
+                        <h4>Informática Básica</h4>
+                    </div>
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/embed/videoseries?list=PL-QAz5R5Rlm7wn20xLTIr84gbS2XkzqEZ"
+                            title="Lógica de Programação"></iframe>
+                        <h4>Lógica de Programação</h4>
+                    </div>
+
+                    <!-- Mais vídeos de programação -->
+                </div>
+                <button class="next-btn">&#10095;</button>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h3>Programação</h3>
+            <div class="carousel-container">
+                <button class="prev-btn">&#10094;</button>
+                <div class="video-carousel">
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/embed/videoseries?list=PLHz_AreHm4dlKP6QQCekuIPky1CiwmdI6
+                        " title="Python"></iframe>
+                        <h4>Aprenda Python</h4>
+                    </div>
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/embed/link_de_programacao"
+                            title="Lógica de Programação"></iframe>
+                        <h4>Lógica de Programação</h4>
+                    </div>
+
+                    <!-- Mais vídeos de programação -->
+                </div>
+                <button class="next-btn">&#10095;</button>
+            </div>
+        </div>
+
+        <!-- Bloco de Hardware -->
+        <div class="content-block">
+            <h3>Hardware</h3>
+            <div class="carousel-container">
+                <button class="prev-btn">&#10094;</button>
+                <div class="video-carousel">
+                    <div class="video-item">
+                        <iframe src="" title="Introdução ao Hardware"></iframe>
+                        <h4>Introdução ao Hardware</h4>
+                    </div>
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/embed/link_de_hardware"
+                            title="Montagem de Computadores"></iframe>
+                        <h4>Montagem de Computadores</h4>
+                    </div>
+                    <!-- Mais vídeos de hardware -->
+                </div>
+                <button class="next-btn">&#10095;</button>
+            </div>
+        </div>
+        <div class="content-block">
+            <h3>Hardware</h3>
+            <div class="carousel-container">
+                <button class="prev-btn">&#10094;</button>
+                <div class="video-carousel">
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/embed/WULwZ6v_Ai8" title="Introdução ao Hardware"></iframe>
+                        <h4>Introdução ao Hardware</h4>
+                    </div>
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/embed/link_de_hardware"
+                            title="Montagem de Computadores"></iframe>
+                        <h4>Montagem de Computadores</h4>
+                    </div>
+                    <!-- Mais vídeos de hardware -->
+                </div>
+                <button class="next-btn">&#10095;</button>
+            </div>
+        </div>
+
+        <!-- Bloco de Office Básico -->
+        <div class="content-block">
+            <h3>Office Básico</h3>
+            <div class="carousel-container">
+                <button class="prev-btn">&#10094;</button>
+                <div class="video-carousel">
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/embed/link_de_office" title="Introdução ao Word"></iframe>
+                        <h4>Introdução ao Word</h4>
+                    </div>
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/embed/link_de_office"
+                            title="Noções Básicas de Excel"></iframe>
+                        <h4>Noções Básicas de Excel</h4>
+                    </div>
+                    <!-- Mais vídeos de Office Básico -->
+                </div>
+                <button class="next-btn">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-bottom">
+            &copy; 2024 Informática Fácil | Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <!-- JavaScript para Carrossel -->
+    <script>
+        const carousels = document.querySelectorAll('.carousel-container');
+
+        carousels.forEach((carousel) => {
+            const prevBtn = carousel.querySelector('.prev-btn');
+            const nextBtn = carousel.querySelector('.next-btn');
+            const videoCarousel = carousel.querySelector('.video-carousel');
+
+            prevBtn.addEventListener('click', () => {
+                videoCarousel.scrollBy({
+                    top: 0,
+                    left: -300,
+                    behavior: 'smooth'
+                });
+            });
+
+            nextBtn.addEventListener('click', () => {
+                videoCarousel.scrollBy({
+                    top: 0,
+                    left: 300,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
